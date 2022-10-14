@@ -15,7 +15,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
       type="button"
-      onClick={() => customFunc()}
+      onClick={customFunc}
       style={{ color }}
       className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
@@ -67,6 +67,7 @@ const Navbar = () => {
           color="skyblue"
           icon={<FiShoppingCart />}
         />
+        
         <NavButton
           title="Chat"
           dotColor='#03c9d7'
